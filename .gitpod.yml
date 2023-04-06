@@ -1,0 +1,21 @@
+image: jelaniwoods/appdev2022-base-ruby
+
+tasks:
+  - before: |
+      bin/setup
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+  - port: 9500-9999
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - vortizhe.simple-ruby-erb
+    - mbessey.vscode-rufo
+    - aliariff.vscode-erb-beautify
+
+github:
+  prebuilds:
+    master: true
